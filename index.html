@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Syncgram empowers African creators with automated community access, global payments, and a unified dashboard."
+    />
+    <title>Syncgram® — Empowering African Creators</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/coolvetica" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="brand-icon" aria-hidden="true">
+            <img src="logo.png" alt="Syncgram Logo" style="width: 100%; height: 100%; object-fit: contain;">
+          </span>
+          <span class="brand-name">Syncgram</span>
+        </a>
+        <nav class="nav header-center" aria-label="Main navigation">
+          <a class="nav-link" href="pay.html">Payment</a>
+          <a class="nav-link" href="use-cases/index.html">
+            Use Cases <span class="nav-arrow" aria-hidden="true">▾</span>
+          </a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+        </nav>
+        <div class="nav-actions header-right">
+          <a class="cta" href="#login">Sign In</a>
+        </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="mobile-menu" hidden>
+        <nav>
+          <a href="blog.html">Blog</a>
+          <a href="#login">Sign In</a>
+          <a href="docs.html">Docs</a>
+          <a class="cta" href="pay.html">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="pre-hero">
+        <div class="container">
+          <p class="pre-hero-text">Powering the next generation of digital communities</p>
+        </div>
+      </section>
+
+      <section class="hero" id="start">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Empowering creators to do more than create — to earn, grow, and scale.
+            </h1>
+            <p class="hero-lead">
+              Creators create — Syncgram handles the rest. Payments, access, and automation, all in one place.
+            </p>
+            <div class="hero-cta">
+              <a class="cta" href="pay.html" role="button">Start Earning</a>
+              <p class="cta-note">No subscription required</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-frame">
+              <iframe
+                class="video-embed"
+                src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1&controls=1"
+                title="Syncgram demo"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="statistics" aria-label="Platform statistics">
+        <div class="container stats-row">
+          <div class="stat">
+            <div class="stat-figure">₦900000000</div>
+            <div class="stat-label">Earned by creators through Syncgram</div>
+          </div>
+          <div class="stat">
+            <div class="stat-figure">2000000</div>
+            <div class="stat-label">Members Managed across Telegram, WhatsApp and Discord</div>
+          </div>
+          <div class="stat">
+            <div class="stat-figure">30000</div>
+            <div class="stat-label">Recurring subscriptions automated</div>
+          </div>
+          <div class="stat">
+            <div class="stat-figure">150</div>
+            <div class="stat-label">Countries supported worldwide</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="use-cases" aria-labelledby="use-cases-heading">
+        <div class="container">
+          <h2 id="use-cases-heading" class="section-title">Use Cases</h2>
+          <div class="use-cases-grid">
+            <a href="use-cases/paid-group/" class="use-case-tile">
+              <div class="icon"></div>
+              <h3>Paid Groups</h3>
+              <p>Monetize exclusive community access</p>
+            </a>
+            <a href="use-cases/creators/" class="use-case-tile">
+              <div class="icon"></div>
+              <h3>Creators & Coaches</h3>
+              <p>Build and sell premium content</p>
+            </a>
+            <a href="use-cases/courses/" class="use-case-tile">
+              <div class="icon"></div>
+              <h3>Courses</h3>
+              <p>Deliver online education seamlessly</p>
+            </a>
+            <a href="use-cases/software/" class="use-case-tile">
+              <div class="icon"></div>
+              <h3>Software Licenses</h3>
+              <p>Sell digital products with ease</p>
+            </a>
+            <a href="use-cases/agency/" class="use-case-tile">
+              <div class="icon"></div>
+              <h3>Agencies</h3>
+              <p>Manage client subscriptions</p>
+            </a>
+            <a href="use-cases/platform/" class="use-case-tile">
+              <div class="icon"></div>
+              <h3>Platforms</h3>
+              <p>Scale multi-tenant businesses</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="core-features" aria-labelledby="features-heading">
+        <div class="container">
+          <h2 id="features-heading" class="section-title">Core Features</h2>
+          <div class="features-grid">
+            <div class="feature-tile">
+              <div class="feature-icon"></div>
+              <h3>Expanded Payments</h3>
+              <p>Accept fiat, crypto, and mobile money globally.</p>
+              <a href="docs.html" class="feature-cta">Learn more</a>
+            </div>
+            <div class="feature-tile">
+              <div class="feature-icon"></div>
+              <h3>Automated Access</h3>
+              <p>Grant roles on Telegram, WhatsApp, Discord instantly.</p>
+              <a href="docs.html" class="feature-cta">Learn more</a>
+            </div>
+            <div class="feature-tile">
+              <div class="feature-icon"></div>
+              <h3>Community Insights</h3>
+              <p>Track subscriptions and engagement analytics.</p>
+              <a href="docs.html" class="feature-cta">Learn more</a>
+            </div>
+            <div class="feature-tile">
+              <div class="feature-icon"></div>
+              <h3>Integrations</h3>
+              <p>APIs and webhooks for seamless workflows.</p>
+              <a href="docs.html" class="feature-cta">Learn more</a>
+            </div>
+            <div class="feature-tile">
+              <div class="feature-icon"></div>
+              <h3>Hosted Checkout</h3>
+              <p>Secure payments at pay.sync-gram.com.</p>
+              <a href="pay.html" class="feature-cta">Learn more</a>
+            </div>
+            <div class="feature-tile">
+              <div class="feature-icon"></div>
+              <h3>Security & Payouts</h3>
+              <p>Reliable payouts with enterprise-grade security.</p>
+              <a href="docs.html" class="feature-cta">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="apps-section" aria-labelledby="apps-heading">
+        <div class="container">
+          <h2 id="apps-heading" class="section-title">Build your product with Syncgram apps</h2>
+          <div class="feature-blue">
+            <div class="feature-copy">
+              <h3>Chat</h3>
+              <p>Group messaging • Private tiers • Free or paid • Roles & moderation</p>
+              <a class="btn feature-btn" href="use-cases/index.html">Get started</a>
+            </div>
+            <div class="mockphone" aria-hidden="true"></div>
+          </div>
+
+          <div class="tools-grid">
+            <div class="tool-card">
+              <h4>Store page</h4>
+              <p>High-converting page to manage your products.</p>
+            </div>
+            <div class="tool-card">
+              <h4>Payments</h4>
+              <p>Accept multiple gateways and crypto.</p>
+            </div>
+            <div class="tool-card">
+              <h4>Affiliates</h4>
+              <p>Built-in referral and affiliate tracking.</p>
+            </div>
+            <div class="tool-card">
+              <h4>Mobile app</h4>
+              <p>Manage on the go.</p>
+            </div>
+            <div class="tool-card">
+              <h4>Buy now, pay later</h4>
+              <p>Offer BNPL for customers.</p>
+            </div>
+            <div class="tool-card">
+              <h4>Dispute fighter</h4>
+              <p>We help handle chargebacks and disputes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+        <div class="container">
+          <h2 id="how-heading" class="section-title">How It Works</h2>
+          <div class="steps-grid">
+            <div class="step">
+              <div class="step-icon">1</div>
+              <h3>Create Store & Product</h3>
+              <p>Set up your store and define products in minutes.</p>
+              <a href="docs.html" class="step-cta">Get Started</a>
+            </div>
+            <div class="step">
+              <div class="step-icon">2</div>
+              <h3>Connect Platforms & Payments</h3>
+              <p>Link Telegram, WhatsApp, Discord and your payment methods.</p>
+              <a href="docs.html" class="step-cta">Learn More</a>
+            </div>
+            <div class="step">
+              <div class="step-icon">3</div>
+              <h3>Accept Payments & Grant Access</h3>
+              <p>Automate everything — payments and access in one flow.</p>
+              <a href="pay.html" class="step-cta">Start Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" aria-labelledby="pricing-heading">
+        <div class="container">
+          <h2 id="pricing-heading" class="section-title">Syncgram pricing</h2>
+          <div class="pricing-card">
+            <div class="pricing-left" aria-hidden="true"></div>
+            <div class="pricing-right">
+              <div class="pricing-price">$0</div>
+              <div class="pricing-sub">Free to start — transaction fee applies</div>
+              <ul class="pricing-features">
+                <li>Multiple payment methods</li>
+                <li>Automated access and role assignment</li>
+                <li>Dashboard and analytics</li>
+              </ul>
+              <a class="btn btn-primary" href="pay.html">Start selling for free</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-heading">
+        <div class="container">
+          <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+          <div class="accordion" role="tablist" aria-multiselectable="false">
+            <div class="accordion-item">
+              <button id="faq-q1" class="accordion-trigger" aria-expanded="false" aria-controls="faq-1">What payment methods do you support? <span class="dropdown-icon">▼</span></button>
+              <div id="faq-1" class="accordion-content" role="region" aria-labelledby="faq-q1" hidden>
+                <p>We support cards, bank transfers, mobile money, and popular crypto rails depending on your region.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="faq-q2" class="accordion-trigger" aria-expanded="false" aria-controls="faq-2">Which platforms do you integrate with? <span class="dropdown-icon">▼</span></button>
+              <div id="faq-2" class="accordion-content" role="region" aria-labelledby="faq-q2" hidden>
+                <p>Telegram, WhatsApp, and Discord for automated access management.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="faq-q3" class="accordion-trigger" aria-expanded="false" aria-controls="faq-3">What are the fees? <span class="dropdown-icon">▼</span></button>
+              <div id="faq-3" class="accordion-content" role="region" aria-labelledby="faq-q3" hidden>
+                <p>Free to start; transaction fees apply per successful payment. No monthly fees.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="faq-q4" class="accordion-trigger" aria-expanded="false" aria-controls="faq-4">How do payouts work? <span class="dropdown-icon">▼</span></button>
+              <div id="faq-4" class="accordion-content" role="region" aria-labelledby="faq-q4" hidden>
+                <p>Payouts are processed directly to your connected accounts with fast settlement times.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="faq-q5" class="accordion-trigger" aria-expanded="false" aria-controls="faq-5">Is Syncgram secure? <span class="dropdown-icon">▼</span></button>
+              <div id="faq-5" class="accordion-content" role="region" aria-labelledby="faq-q5" hidden>
+                <p>Yes, we use enterprise-grade security with encryption and compliance standards.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="faq-q6" class="accordion-trigger" aria-expanded="false" aria-controls="faq-6">How do I migrate my existing community? <span class="dropdown-icon">▼</span></button>
+              <div id="faq-6" class="accordion-content" role="region" aria-labelledby="faq-q6" hidden>
+                <p>Our support team helps with seamless migration. Contact us for assistance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-label="Final call to action">
+        <div class="container final-cta-row">
+          <div class="final-cta-copy">
+            <h3>Start selling with Syncgram.</h3>
+            <p>Automate access, collect payments, and grow your community.</p>
+          </div>
+          <div class="final-cta-actions">
+            <a class="cta-btn" href="pay.html">Get started</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-preview" aria-labelledby="dashboard-heading">
+        <div class="container">
+          <h2 id="dashboard-heading" class="section-title">Dashboard Preview</h2>
+          <div class="dashboard-carousel">
+            <div class="dashboard-card">
+              <div class="dashboard-image"></div>
+              <h3>Subscriptions</h3>
+              <p>Manage recurring payments and member tiers.</p>
+            </div>
+            <div class="dashboard-card">
+              <div class="dashboard-image"></div>
+              <h3>Members List</h3>
+              <p>View and organize your community members.</p>
+            </div>
+            <div class="dashboard-card">
+              <div class="dashboard-image"></div>
+              <h3>Payout Ledger</h3>
+              <p>Track all payouts and financial reports.</p>
+            </div>
+            <div class="dashboard-card">
+              <div class="dashboard-image"></div>
+              <h3>Access Logs</h3>
+              <p>Monitor access grants and revocations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-grid" id="use-cases">
+        <div class="container">
+          <div class="section-header">
+            <h2>Automate Your Community</h2>
+            <p>
+              Grow faster with effortless access and payments. Zero coding,
+              zero spreadsheets.
+            </p>
+          </div>
+          <div class="grid">
+            <article class="feature-card">
+              <span class="feature-tag">Expanded payments</span>
+              <h3>Accept global payments in fiat and crypto.</h3>
+              <p>
+                Syncgram handles card, mobile money, bank transfers, and
+                stablecoins. Settlements land directly in your wallet.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-tag">Automated access</span>
+              <h3>Hands-free membership syncing.</h3>
+              <p>
+                Grant or revoke access on Telegram, WhatsApp, Discord, and the
+                web instantly with intelligent automation.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-tag">Unified dashboard</span>
+              <h3>Track revenue, churn, and member health.</h3>
+              <p>
+                One command center for subscriptions, payouts, and member
+                insights—with alerts when something needs attention.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem-solution">
+        <div class="container">
+          <div class="section-header">
+            <h2>Before & After: Managing Communities the Syncgram Way</h2>
+          </div>
+          <div class="split">
+            <div class="card card--muted">
+              <h3>BEFORE</h3>
+              <ul>
+                <li>Spreadsheet chaos and manual DMs</li>
+                <li>Slow payouts and endless errors</li>
+                <li>Lost revenue and frustrated members</li>
+              </ul>
+            </div>
+            <div class="card card--highlight">
+              <h3>AFTER</h3>
+              <ul>
+                <li>Auto-grant access instantly</li>
+                <li>Global payments with zero hassle</li>
+                <li>Real-time analytics and insights</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cta-section">
+            <a class="cta" href="#how-it-works">See How It Works</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="resources">
+        <div class="container">
+          <div class="section-header">
+            <h2>Testimonials</h2>
+            <p>Real stories from creators scaling with Syncgram.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">S</div>
+              <p class="testimonial-quote">
+                "Getting paid worldwide is now easy. My community doubled with Syncgram."
+              </p>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Samuel</span>
+                <span class="testimonial-role">Crypto Trader</span>
+              </div>
+              <div class="testimonial-metric">Community doubled in 3 months</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">E</div>
+              <p class="testimonial-quote">
+                "Automated access saves me hours every week. The setup is seamless."
+              </p>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Ebuka</span>
+                <span class="testimonial-role">Telegram Owner</span>
+              </div>
+              <div class="testimonial-metric">Saved 10+ hours/week</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">A</div>
+              <p class="testimonial-quote">
+                "Syncgram's dashboard gives me all the insights I need to grow."
+              </p>
+              <div class="testimonial-info">
+                <span class="testimonial-name">Aisha</span>
+                <span class="testimonial-role">Discord Admin</span>
+              </div>
+              <div class="testimonial-metric">Revenue up 150%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-booking">
+        <div class="container">
+          <div class="demo-content">
+            <h2>Book a 20-Minute Demo</h2>
+            <p>See how Syncgram can transform your community management.</p>
+            <form class="demo-form">
+              <input type="text" placeholder="Name" required>
+              <input type="email" placeholder="Email" required>
+              <input type="text" placeholder="Telegram Handle" required>
+              <select required>
+                <option value="">Team Size</option>
+                <option value="1-5">1-5</option>
+                <option value="6-20">6-20</option>
+                <option value="21+">21+</option>
+              </select>
+              <input type="datetime-local" required>
+              <button type="submit" class="cta">Book Demo</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="container">
+          <h2>Trusted integrations & partners</h2>
+          <div class="partner-row">
+            <span>Flutterwave</span>
+            <span>MTN MoMo</span>
+            <span>ChipperCash</span>
+            <span>Polygon</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" id="pricing">
+        <div class="container">
+          <div class="stat-card">
+            <span class="stat-value">1+ yr</span>
+            <span class="stat-label">In operation</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">1200+</span>
+            <span class="stat-label">Active creators</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">Global</span>
+            <span class="stat-label">Fiat & crypto payouts</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner" id="docs">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Automate your community today.</h2>
+            <p>
+              Launch with free onboarding, transparent pricing, and battle-tested
+              payment infrastructure.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="cta" href="#start">Start Earning</a>
+            <a class="cta cta--ghost" href="#demo">Talk to Sales</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="login">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-icon" aria-hidden="true">
+              <img src="logo.png" alt="Syncgram Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            </span>
+            <span class="brand-name">Syncgram</span>
+          </div>
+          <p>
+            Syncgram empowers creators to launch, scale, and monetize communities
+            with automated access and flexible payments.
+          </p>
+          <form class="newsletter">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Product</h4>
+            <a href="pricing.html">Pricing</a>
+            <a href="use-cases/index.html">Use Cases</a>
+            <a href="docs.html">Documentation</a>
+            <a href="pay.html">Payments</a>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <a href="use-cases/paid-group/">Paid Groups</a>
+            <a href="use-cases/creators/">Creators & Coaches</a>
+            <a href="use-cases/courses/">Courses</a>
+            <a href="use-cases/software/">Software Licenses</a>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <a href="blog.html">Blog</a>
+            <a href="docs.html">Help Center</a>
+            <a href="#demo">Demo</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#about">About</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="legal/terms.html">Terms</a>
+            <a href="legal/privacy.html">Privacy</a>
+            <a href="#cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <div class="container footer-base-content">
+          <span>© 2025 Syncgram®</span>
+          <div class="footer-controls">
+            <button id="theme-toggle" class="theme-toggle">Switch Palette</button>
+            <div class="footer-social">
+              <a href="#twitter" aria-label="Syncgram on Twitter">Twitter</a>
+              <a href="#linkedin" aria-label="Syncgram on LinkedIn">LinkedIn</a>
+              <a href="#youtube" aria-label="Syncgram on YouTube">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs — Syncgram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .docs-layout { display:grid; grid-template-columns: 260px 1fr; gap: 24px; }
+      .docs-sidebar { position: sticky; top: 80px; height: calc(100vh - 100px); overflow:auto; border-right:1px solid var(--nav-border); padding-right:16px; }
+      .docs-sidebar a { display:block; color: var(--text-muted); padding: 8px 0; }
+      .docs-sidebar a:hover { color: var(--text-primary); }
+      .docs-content h2 { margin-top: 0; }
+      @media (max-width: 1024px){ .docs-layout{ grid-template-columns: 1fr; } .docs-sidebar{ position: static; height:auto; border-right:0; padding-right:0; } }
+      pre { background: rgba(255,255,255,0.03); border:1px solid var(--nav-border); padding:16px; border-radius:12px; overflow:auto; }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a class="brand" href="index.html" aria-label="Home">
+          <span class="brand-icon" aria-hidden="true"></span>
+          <span class="brand-name">Syncgram</span>
+        </a>
+        <nav class="nav header-center" aria-label="Main navigation">
+          <a class="nav-link" href="use-cases/index.html">Use Cases</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link" href="docs.html">Docs</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+        </nav>
+        <div class="nav-actions header-right">
+          <a class="nav-link nav-link--ghost" href="#">Sign In</a>
+          <a class="cta" href="pay.html">Book a Demo</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="mobile-menu" hidden>
+        <nav>
+          <a href="use-cases/index.html">Use Cases</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="docs.html">Docs</a>
+          <a href="blog.html">Blog</a>
+          <a class="cta" href="pay.html">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">Documentation</div>
+            <h1 class="hero-title">Build with <span class="accent">Syncgram</span></h1>
+            <p class="hero-lead">Get started, explore APIs, and integrate Telegram, WhatsApp, and Discord with ease.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container docs-layout">
+          <aside class="docs-sidebar">
+            <strong>Getting Started</strong>
+            <a href="#install">Install</a>
+            <a href="#auth">Authentication</a>
+            <a href="#webhooks">Webhooks</a>
+            <br />
+            <strong>Integrations</strong>
+            <a href="#telegram">Telegram</a>
+            <a href="#whatsapp">WhatsApp</a>
+            <a href="#discord">Discord</a>
+            <br />
+            <strong>API</strong>
+            <a href="#endpoints">Endpoints</a>
+            <a href="#errors">Error codes</a>
+            <a href="#faq">FAQ</a>
+          </aside>
+          <div class="docs-content">
+            <h2 id="install">Install</h2>
+            <pre><code># Install the SDK (placeholder)
+npm i @syncgram/sdk</code></pre>
+            <h2 id="auth">Authentication</h2>
+            <pre><code>import { Syncgram } from "@syncgram/sdk";
+const client = new Syncgram({ apiKey: process.env.SYNCGRAM_API_KEY });</code></pre>
+            <h2 id="webhooks">Webhooks</h2>
+            <pre><code>// Receive payment and membership events at your webhook endpoint.</code></pre>
+            <h2 id="telegram">Telegram</h2>
+            <p>Connect your bot and specify group/channel mappings for memberships.</p>
+            <h2 id="discord">Discord</h2>
+            <p>Grant roles to members and revoke on expiry automatically.</p>
+            <h2 id="endpoints">Endpoints</h2>
+            <pre><code>GET /v1/members
+POST /v1/checkouts
+POST /v1/webhooks</code></pre>
+            <h2 id="faq">FAQ</h2>
+            <p>Common developer questions and troubleshooting.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-icon" aria-hidden="true"></span>
+            <span class="brand-name">Syncgram</span>
+          </div>
+          <p>Syncgram empowers creators to launch, scale, and monetize communities with automated access and flexible payments.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Product</h4>
+            <a href="use-cases/index.html">Use Cases</a>
+            <a href="docs.html">Docs</a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="blog.html">Blog</a>
+            <a href="legal/terms.html">Terms</a>
+            <a href="legal/privacy.html">Privacy</a>
+          </div>
+          <div>
+            <h4>Community</h4>
+            <a href="#">Twitter</a>
+            <a href="#">Telegram</a>
+            <a href="#">Discord</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <div class="container footer-base-content">
+          <span>© 2025 Syncgram®</span>
+          <div class="footer-social">
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMobile = document.querySelector(".nav-mobile");
+      const setMenuState = (isOpen) => {
+        navToggle.classList.toggle("is-open", isOpen);
+        navMobile.classList.toggle("is-open", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navMobile.hidden = !isOpen;
+      };
+      if (navToggle && navMobile) {
+        navToggle.addEventListener("click", () => {
+          const expanded = navToggle.getAttribute("aria-expanded") === "true";
+          setMenuState(!expanded);
+        });
+        navMobile.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => setMenuState(false));
+        });
+      }
+    </script>
+  </body>
+</html>
+

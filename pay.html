@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Demo — Syncgram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .embed-card{max-width:840px;margin:0 auto;border:1px solid var(--nav-border);border-radius:20px;overflow:hidden;background:rgba(255,255,255,0.03)}
+      .embed-card .video-frame{aspect-ratio:16/9}
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a class="brand" href="index.html" aria-label="Home">
+          <span class="brand-icon" aria-hidden="true"></span>
+          <span class="brand-name">Syncgram</span>
+        </a>
+        <nav class="nav header-center" aria-label="Main navigation">
+          <a class="nav-link" href="use-cases/index.html">Use Cases</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link" href="docs.html">Docs</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+        </nav>
+        <div class="nav-actions header-right">
+          <a class="nav-link nav-link--ghost" href="#">Sign In</a>
+          <a class="cta" href="pay.html">Book a Demo</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="mobile-menu" hidden>
+        <nav>
+          <a href="use-cases/index.html">Use Cases</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="docs.html">Docs</a>
+          <a href="blog.html">Blog</a>
+          <a class="cta" href="pay.html">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">Demo</div>
+            <h1 class="hero-title">See <span class="accent">Syncgram</span> in action</h1>
+            <p class="hero-lead">Book a live walkthrough or try the interactive demo below.</p>
+            <div class="embed-card">
+              <div class="video-frame">
+                <!-- Replace with Typeform/Cal.com or a checkout embed -->
+                <iframe class="video-embed" src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1" title="Demo" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-base-content">
+        <span>© 2025 Syncgram®</span>
+        <div class="footer-social">
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMobile = document.querySelector(".nav-mobile");
+      const setMenuState = (isOpen) => {
+        navToggle.classList.toggle("is-open", isOpen);
+        navMobile.classList.toggle("is-open", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navMobile.hidden = !isOpen;
+      };
+      if (navToggle && navMobile) {
+        navToggle.addEventListener("click", () => {
+          const expanded = navToggle.getAttribute("aria-expanded") === "true";
+          setMenuState(!expanded);
+        });
+        navMobile.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => setMenuState(false));
+        });
+      }
+    </script>
+  </body>
+</html>
+

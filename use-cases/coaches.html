@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use Case — Coaches & Mentors | Syncgram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a class="brand" href="../index.html" aria-label="Home">
+          <span class="brand-icon" aria-hidden="true">
+            <img src="../logo.png" alt="Syncgram Logo" style="width: 100%; height: 100%; object-fit: contain;">
+          </span>
+          <span class="brand-name">Syncgram</span>
+        </a>
+        <nav class="nav header-center" aria-label="Main navigation">
+          <a class="nav-link" href="../pay.html">Payment</a>
+          <a class="nav-link" href="../use-cases/index.html">
+            Use Cases <span class="nav-arrow" aria-hidden="true">▾</span>
+          </a>
+          <a class="nav-link" href="../pricing.html">Pricing</a>
+        </nav>
+        <div class="nav-actions header-right">
+          <a class="cta" href="#login">Sign In</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="mobile-menu" hidden>
+        <nav>
+          <a href="../blog.html">Blog</a>
+          <a href="#login">Sign In</a>
+          <a href="../docs.html">Docs</a>
+          <a class="cta" href="../pay.html">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero hero--split">
+        <div class="container hero-split">
+          <div class="hero-content">
+            <div class="hero-badge">Use Case</div>
+            <h1 class="hero-title">Coaches & <span class="accent">Mentors</span></h1>
+            <p class="hero-lead">Run cohorts, memberships, and private chats — with automated billing and instant access.</p>
+          </div>
+          <div class="hero-media"><div class="video-frame"></div></div>
+        </div>
+      </section>
+      <section class="feature-grid">
+        <div class="container">
+          <div class="grid">
+            <article class="feature-card">
+              <span class="feature-tag">Plans</span>
+              <h3>Flexible tiers</h3>
+              <p>Create monthly, quarterly, or lifetime options for students.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-tag">Automations</span>
+              <h3>Hands-free access</h3>
+              <p>Grant and revoke access across Telegram, WhatsApp, and Discord.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-tag">Insights</span>
+              <h3>Track outcomes</h3>
+              <p>See who’s engaged, renewing, and driving referrals.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="login">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-icon" aria-hidden="true">
+              <img src="../logo.png" alt="Syncgram Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            </span>
+            <span class="brand-name">Syncgram</span>
+          </div>
+          <p>
+            Syncgram empowers creators to launch, scale, and monetize communities
+            with automated access and flexible payments.
+          </p>
+          <form class="newsletter">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Product</h4>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../use-cases/index.html">Use Cases</a>
+            <a href="../docs.html">Documentation</a>
+            <a href="../pay.html">Payments</a>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <a href="../use-cases/paid-group/">Paid Groups</a>
+            <a href="../use-cases/creators/">Creators & Coaches</a>
+            <a href="../use-cases/courses/">Courses</a>
+            <a href="../use-cases/software/">Software Licenses</a>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <a href="../blog.html">Blog</a>
+            <a href="../docs.html">Help Center</a>
+            <a href="#demo">Demo</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#about">About</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="../legal/terms.html">Terms</a>
+            <a href="../legal/privacy.html">Privacy</a>
+            <a href="#cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <div class="container footer-base-content">
+          <span>© 2025 Syncgram®</span>
+          <div class="footer-controls">
+            <button id="theme-toggle" class="theme-toggle">Switch Palette</button>
+            <div class="footer-social">
+              <a href="#twitter" aria-label="Syncgram on Twitter">Twitter</a>
+              <a href="#linkedin" aria-label="Syncgram on LinkedIn">LinkedIn</a>
+              <a href="#youtube" aria-label="Syncgram on YouTube">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
+

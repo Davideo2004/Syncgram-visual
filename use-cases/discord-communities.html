@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use Case — Discord Communities | Syncgram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a class="brand" href="../index.html" aria-label="Home">
+          <span class="brand-icon" aria-hidden="true"></span>
+          <span class="brand-name">Syncgram</span>
+        </a>
+        <nav class="nav header-center" aria-label="Main navigation">
+          <a class="nav-link" href="../use-cases/index.html">Use Cases</a>
+          <a class="nav-link" href="../pricing.html">Pricing</a>
+          <a class="nav-link" href="../docs.html">Docs</a>
+          <a class="nav-link" href="../blog.html">Blog</a>
+        </nav>
+        <div class="nav-actions header-right">
+          <a class="nav-link nav-link--ghost" href="#">Sign In</a>
+          <a class="cta" href="../pay.html">Book a Demo</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="mobile-menu" hidden>
+        <nav>
+          <a href="../use-cases/index.html">Use Cases</a>
+          <a href="../pricing.html">Pricing</a>
+          <a href="../docs.html">Docs</a>
+          <a href="../blog.html">Blog</a>
+          <a class="cta" href="../pay.html">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero hero--split">
+        <div class="container hero-split">
+          <div class="hero-content">
+            <div class="hero-badge">Use Case</div>
+            <h1 class="hero-title"><span class="accent">Discord</span> Communities</h1>
+            <p class="hero-lead">Automate roles and renewals, protect premium channels, and grow with real-time insights.</p>
+          </div>
+          <div class="hero-media"><div class="video-frame"></div></div>
+        </div>
+      </section>
+      <section class="feature-grid">
+        <div class="container">
+          <div class="grid">
+            <article class="feature-card">
+              <span class="feature-tag">Roles</span>
+              <h3>Smart role syncing</h3>
+              <p>Keep member roles in lockstep with their plan and payment status.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-tag">Security</span>
+              <h3>Protect channels</h3>
+              <p>Automated revocations ensure only paying members stay inside.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-tag">Analytics</span>
+              <h3>Live insights</h3>
+              <p>Monitor retention, churn, and revenue drivers at a glance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-icon" aria-hidden="true"></span>
+            <span class="brand-name">Syncgram</span>
+          </div>
+          <p>Syncgram empowers creators to launch, scale, and monetize communities with automated access and flexible payments.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Product</h4>
+            <a href="../use-cases/index.html">Use Cases</a>
+            <a href="../docs.html">Docs</a>
+            <a href="../pricing.html">Pricing</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="../blog.html">Blog</a>
+            <a href="../legal/terms.html">Terms</a>
+            <a href="../legal/privacy.html">Privacy</a>
+          </div>
+          <div>
+            <h4>Community</h4>
+            <a href="#">Twitter</a>
+            <a href="#">Telegram</a>
+            <a href="#">Discord</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <div class="container footer-base-content">
+          <span>© 2025 Syncgram®</span>
+          <div class="footer-social">
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMobile = document.querySelector(".nav-mobile");
+      const setMenuState = (isOpen) => {
+        navToggle.classList.toggle("is-open", isOpen);
+        navMobile.classList.toggle("is-open", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navMobile.hidden = !isOpen;
+      };
+      if (navToggle && navMobile) {
+        navToggle.addEventListener("click", () => {
+          const expanded = navToggle.getAttribute("aria-expanded") === "true";
+          setMenuState(!expanded);
+        });
+        navMobile.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => setMenuState(false));
+        });
+      }
+    </script>
+  </body>
+</html>
+
