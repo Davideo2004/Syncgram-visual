@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-accent: #16A34A;
+  --color-accent-2: #0EA5A4;
+  --color-bg: #FFFFFF;
+  --color-surface: #F6F8F7;
+  --color-text: #111827;
+  --color-muted: #6B7280;
+  --color-success: #16A34A;
+  --color-danger: #DC2626;
+  --color-cta-ghost: rgba(17,24,39,0.06);
+  --color-shadow: rgba(17,24,39,0.06);
+
+  /* Radius */
+  --radius-base: 12px;
+  --radius-pill: 999px;
+
+  /* Glass */
+  --glass: rgba(255,255,255,0.7);
+
+  /* Typography */
+  --fs-display-xl: 44px;
+  --fs-display-lg: 36px;
+  --fs-h1: 28px;
+  --fs-h2: 22px;
+  --fs-body: 16px;
+  --fs-small: 13px;
+  --lh-tight: 1.08;
+  --lh-normal: 1.45;
+
+  /* Layout / spacing scale (8px base) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* Container */
+  --container-max: 1200px;
+}
+
+@theme inline {
+  /* Map CSS variables to Tailwind tokens */
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --color-syncgreen: #16A34A;
+  --color-tealsync: #0EA5A4;
+  --color-surface: #F6F8F7;
+  --color-text: #111827;
+  --color-muted: #6B7280;
+  --radius-base: var(--radius-base);
+  --radius-pill: var(--radius-pill);
+  --font-sans: var(--font-inter);
+  --shadow-soft: 0 6px 20px var(--color-shadow);
+  --text-display-xl: var(--fs-display-xl) / var(--lh-tight) var(--font-inter);
+  --text-display-lg: var(--fs-display-lg) / 1.1 var(--font-inter);
+  --text-h1: var(--fs-h1) / 1.12 var(--font-inter);
+  --text-h2: var(--fs-h2) / 1.2 var(--font-inter);
+  --text-body: var(--fs-body) / var(--lh-normal) var(--font-inter);
+  --text-small: var(--fs-small) / 1.4 var(--font-inter);
+}
+
+/* Base styles */
+html, body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility: container */
+.container-max {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+}
+
+/* Alerts/Bages typography style */
+.u-alerts-typography {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Focus ring for accessibility */
+:where(a, button, input, select, textarea, [role="button"], [role="tab"], [role="menuitem"]) {
+  outline: none;
+}
+:where(a, button, input, select, textarea, [role="button"], [role="tab"], [role="menuitem"]):focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 35%, transparent);
+  outline: 2px solid color-mix(in srgb, var(--color-accent) 60%, transparent);
+  outline-offset: 2px;
+}

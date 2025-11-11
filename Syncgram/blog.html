@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Syncgram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .blog-grid{display:grid;gap:24px;grid-template-columns:repeat(3,minmax(0,1fr))}
+      .post{border:1px solid var(--nav-border);border-radius:16px;overflow:hidden;background:rgba(255,255,255,0.03)}
+      .post-thumb{aspect-ratio:16/9;background:rgba(255,255,255,0.06)}
+      .post-body{padding:16px}
+      .post-meta{color:var(--muted-2);font-size:.9rem;margin-bottom:6px}
+      @media (max-width:1024px){.blog-grid{grid-template-columns:1fr 1fr}}
+      @media (max-width:640px){.blog-grid{grid-template-columns:1fr}}
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <a class="brand" href="index.html" aria-label="Home">
+          <span class="brand-icon" aria-hidden="true"></span>
+          <span class="brand-name">Syncgram</span>
+        </a>
+        <nav class="nav header-center" aria-label="Main navigation">
+          <a class="nav-link" href="use-cases/index.html">Use Cases</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link" href="docs.html">Docs</a>
+          <a class="nav-link" href="blog.html">Blog</a>
+        </nav>
+        <div class="nav-actions header-right">
+          <a class="nav-link nav-link--ghost" href="#">Sign In</a>
+          <a class="cta" href="pay.html">Book a Demo</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="mobile-menu" hidden>
+        <nav>
+          <a href="use-cases/index.html">Use Cases</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="docs.html">Docs</a>
+          <a href="blog.html">Blog</a>
+          <a class="cta" href="pay.html">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">Blog</div>
+            <h1 class="hero-title">Stories and <span class="accent">updates</span></h1>
+            <p class="hero-lead">Product news, tutorials, and insights for creators and communities.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container blog-grid">
+          <article class="post">
+            <div class="post-thumb"></div>
+            <div class="post-body">
+              <div class="post-meta">Guides • Jan 2025</div>
+              <h3>Automating Telegram access with Syncgram</h3>
+            </div>
+          </article>
+          <article class="post">
+            <div class="post-thumb"></div>
+            <div class="post-body">
+              <div class="post-meta">Product • Dec 2024</div>
+              <h3>New: Multi-currency settlements</h3>
+            </div>
+          </article>
+          <article class="post">
+            <div class="post-thumb"></div>
+            <div class="post-body">
+              <div class="post-meta">Community • Nov 2024</div>
+              <h3>How creators doubled growth with automated renewals</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-icon" aria-hidden="true"></span>
+            <span class="brand-name">Syncgram</span>
+          </div>
+          <p>Syncgram empowers creators to launch, scale, and monetize communities with automated access and flexible payments.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Product</h4>
+            <a href="use-cases/index.html">Use Cases</a>
+            <a href="docs.html">Docs</a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="blog.html">Blog</a>
+            <a href="legal/terms.html">Terms</a>
+            <a href="legal/privacy.html">Privacy</a>
+          </div>
+          <div>
+            <h4>Community</h4>
+            <a href="#">Twitter</a>
+            <a href="#">Telegram</a>
+            <a href="#">Discord</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base">
+        <div class="container footer-base-content">
+          <span>© 2025 Syncgram®</span>
+          <div class="footer-social">
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMobile = document.querySelector(".nav-mobile");
+      const setMenuState = (isOpen) => {
+        navToggle.classList.toggle("is-open", isOpen);
+        navMobile.classList.toggle("is-open", isOpen);
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navMobile.hidden = !isOpen;
+      };
+      if (navToggle && navMobile) {
+        navToggle.addEventListener("click", () => {
+          const expanded = navToggle.getAttribute("aria-expanded") === "true";
+          setMenuState(!expanded);
+        });
+        navMobile.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => setMenuState(false));
+        });
+      }
+    </script>
+  </body>
+</html>
+
