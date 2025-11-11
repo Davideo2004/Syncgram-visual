@@ -342,6 +342,7 @@ a {
   padding: var(--space-sm) 0;
   text-align: center;
   background: var(--bg);
+  margin: 0;
 }
 
 .pre-hero-text {
@@ -1504,4 +1505,5 @@ a {
     transition: none;
   }
 }
+
 
